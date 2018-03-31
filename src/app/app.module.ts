@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +14,11 @@ import { AsanComponent } from './asan/asan.component';
 import { PranayamComponent } from './pranayam/pranayam.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
+import { UserManagementDialogComponent } from './user-management-dialog/user-management-dialog.component';
+import { UserDialogComponent } from './user-management-dialog/user-management-dialog.component';
+import { UserModalService } from './user-management-dialog/user-modal.service';
+import { UserService } from './user-management-dialog/user.service';
+
 
 const appRoutes: Routes = [
   {
@@ -39,6 +46,16 @@ const appRoutes: Routes = [
     component: ComposeComponent,
     outlet: 'popup'
   },
+  // {
+  //   path: 'user',
+  //   component: UserManagementDialogComponent,
+  //   outlet: 'popup'
+  // },
+  {
+    path: 'user',
+    component: UserDialogComponent,
+    outlet: 'popup'
+  },
   { path: '**', component: YogComponent }
 ];
 
@@ -52,17 +69,22 @@ const appRoutes: Routes = [
     AsanComponent,
     PranayamComponent,
     PopupmodelComponent,
-    ComposeComponent
+    ComposeComponent,
+    UserManagementDialogComponent,
+    UserDialogComponent
   ],
+  entryComponents: [
+    UserManagementDialogComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [  UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,6 @@
 import { Component, OnInit, HostBinding} from '@angular/core';
 import { Router } from '@angular/router';
-
-@Component({
-  selector: 'app-compose',
-  templateUrl: './compose.component.html',
-  styleUrls: ['./compose.component.css']
-})
-
-
-
+import { slideInDownAnimation } from '../animations';
 
 
 
@@ -16,8 +8,12 @@ import { Router } from '@angular/router';
   selector: 'app-compose',
   templateUrl: './compose.component.html',
   styles: [':host { position: relative; bottom: 10%; }'],
+  animations: [slideInDownAnimation]
 })
+
+
 export class ComposeComponent {
+  @HostBinding('@routeAnimation') routeAnimation = true;
   @HostBinding('style.display') display = 'block';
   @HostBinding('style.position') position = 'absolute';
 
