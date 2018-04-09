@@ -10,15 +10,13 @@ import { UserService } from './user.service';
   templateUrl: './user-management-dialog.component.html',
   styleUrls: ['./user-management-dialog.component.css']
 })
-export class UserManagementDialogComponent implements OnInit {
+export class UserManagementDialogComponent   {
 
-  constructor(public activeModal: NgbActiveModal,
-    ) {
+  constructor(public activeModal: NgbActiveModal) {
 
      }
 
-  ngOnInit() {
-  }
+ 
 
   clear() {
     this.activeModal.dismiss('cancel');
@@ -50,6 +48,7 @@ export class UserDialogComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    
+    this.routeSub.unsubscribe();
   }
+
 }

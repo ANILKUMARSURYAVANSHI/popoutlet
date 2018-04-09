@@ -1,10 +1,10 @@
 
-  <a [routerLink]="[{ outlets: { popup: ['angular'] } }]">OPOUP</a>
+  <a [routerLink]="[{ outlets: { popup: ['angular'] } }]">Angular Pop</a>
 <div class="alert alert-success">
   <strong>Success!</strong> Indicates a successful or positive action.
 </div>
 <button class="btn btn-success" (click)="navigateU()">Open</button>
-  <!-- <router-outlet></router-outlet> -->
+
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
@@ -21,10 +21,10 @@
   </div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Direct Module @ngBoostrap</button>
 
 <hr>
 
 <pre>{{closeResult}}</pre>
 
-<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact yog</a>
+<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Inner Compose In YOG Component</a>

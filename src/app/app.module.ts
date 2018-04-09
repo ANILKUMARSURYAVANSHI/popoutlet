@@ -16,48 +16,11 @@ import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
 import { UserManagementDialogComponent } from './user-management-dialog/user-management-dialog.component';
 import { UserDialogComponent } from './user-management-dialog/user-management-dialog.component';
-import { UserModalService } from './user-management-dialog/user-modal.service';
 import { UserService } from './user-management-dialog/user.service';
+import { AniltestAppRoutingModule } from './app-routing.module';
 
 
-const appRoutes: Routes = [
-  {
-    path: 'yog',
-    component: YogComponent
-  },
-  { path: 'book', component: BookComponent },
-  {
-    path: 'computer',
-    component: ComputerComponent,
-    data: { title: 'Heroes List' }
-  },
-  {
-    path: '',
-    redirectTo: '/yog',
-    pathMatch: 'full'
-  },
-  {
-    path: 'angular',
-    component: PopupmodelComponent,
-    outlet: 'popup'
-  },
-  {
-    path: 'compose',
-    component: ComposeComponent,
-    outlet: 'popup'
-  },
-  // {
-  //   path: 'user',
-  //   component: UserManagementDialogComponent,
-  //   outlet: 'popup'
-  // },
-  {
-    path: 'user',
-    component: UserDialogComponent,
-    outlet: 'popup'
-  },
-  { path: '**', component: YogComponent }
-];
+
 
 
 @NgModule({
@@ -78,10 +41,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
+    AniltestAppRoutingModule,
     NgbModule.forRoot()
   ],
   providers: [  UserService],
