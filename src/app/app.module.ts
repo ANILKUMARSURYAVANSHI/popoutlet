@@ -14,12 +14,8 @@ import { AsanComponent } from './asan/asan.component';
 import { PranayamComponent } from './pranayam/pranayam.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
-import { UserManagementDialogComponent } from './user-management-dialog/user-management-dialog.component';
-import { UserDialogComponent } from './user-management-dialog/user-management-dialog.component';
-import { UserService } from './user-management-dialog/user.service';
 import { AniltestAppRoutingModule } from './app-routing.module';
-
-
+import { UserModule } from './user-management-dialog/user.module';
 
 
 
@@ -33,18 +29,17 @@ import { AniltestAppRoutingModule } from './app-routing.module';
     PranayamComponent,
     PopupmodelComponent,
     ComposeComponent,
-    UserManagementDialogComponent,
-    UserDialogComponent
   ],
   entryComponents: [
-    UserManagementDialogComponent],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AniltestAppRoutingModule,
+    UserModule,
     NgbModule.forRoot()
   ],
-  providers: [  UserService],
+  providers: [  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

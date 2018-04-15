@@ -8,8 +8,6 @@ import { AsanComponent } from './asan/asan.component';
 import { PranayamComponent } from './pranayam/pranayam.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
-import { UserManagementDialogComponent } from './user-management-dialog/user-management-dialog.component';
-import { UserDialogComponent } from './user-management-dialog/user-management-dialog.component';
 
 const appRoutes: Routes = [
     {
@@ -41,11 +39,6 @@ const appRoutes: Routes = [
     //   component: UserManagementDialogComponent,
     //   outlet: 'popup'
     // },
-    {
-        path: 'user',
-        component: UserDialogComponent,
-        outlet: 'popup'
-    },
     { path: '**', component: YogComponent }
 ];
 
