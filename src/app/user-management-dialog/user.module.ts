@@ -2,6 +2,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule} from '@angular/common';
 import { userState} from './user.route' ;
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import {
     UserManagementDialogComponent,
@@ -12,6 +14,7 @@ import {
 
 @NgModule({
     imports: [
+        NgbModule.forRoot(),
         RouterModule.forChild(userState),
         CommonModule
     ],
@@ -26,7 +29,7 @@ import {
     providers: [
         UserService
     ],
-   exports:[RouterModule],
+    exports:[RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class UserModule { }

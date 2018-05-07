@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,7 +8,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     templateUrl: './user-management.component.html'})
 export class UserManagementComponent {
 
-    constructor(public activeModal: NgbActiveModal) {
+    constructor( ) {
 
     }
 

@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -36,11 +37,10 @@ import { PranayamModule } from './pranayam/pranayam.module';
     BrowserAnimationsModule,
     AniltestAppRoutingModule,
     UserModule,
-    PranayamModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    PranayamModule
   ],
   providers: [  ],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,23 +7,19 @@ import { YogComponent } from './yog/yog.component';
 import { AsanComponent } from './asan/asan.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
+import { CommonModule } from '@angular/common';
 
 const appRoutes: Routes = [
     {
-        path: '',
-        children: [ {
-            path: 'yog',
-            component: YogComponent
-        },
-        {   path: 'book', 
-            component: BookComponent },
-        {
-            path: 'computer',
-            component: ComputerComponent,
-            data: { title: 'Computers ' }
-        }
-
-        ]
+        path: 'yog',
+        component: YogComponent
+    },
+    {   path: 'book', 
+        component: BookComponent },
+    {
+        path: 'computer',
+        component: ComputerComponent,
+        data: { title: 'Computers ' }
     },
 
     {
@@ -41,13 +37,14 @@ const appRoutes: Routes = [
     //   component: UserManagementDialogComponent,
     //   outlet: 'popup'
     // },
-    { path: 'pranayam', loadChildren : './pranayam/pranayam.module#PranayamModule'},
-    { path: '**', component: YogComponent }
+    //{ path: 'pranayam', loadChildren : './pranayam/pranayam.module#PranayamModule'},
+    // { path: '**', component: YogComponent }
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, { useHash: true, enableTracing: true })
+        CommonModule,
+        RouterModule.forRoot(appRoutes)
     ],
     exports: [
         RouterModule
