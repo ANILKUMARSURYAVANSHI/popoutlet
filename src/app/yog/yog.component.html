@@ -1,9 +1,9 @@
 
-  <a [routerLink]="[{ outlets: { popup: ['angular'] } }]">Angular Pop</a>
+  
 <div class="alert alert-success">
-  <strong>Success!</strong> Indicates a successful or positive action.
+  <strong>Success!</strong> Welcome to Yog Component.
 </div>
-<button class="btn btn-success" (click)="navigateU()">Open</button>
+<button class="btn btn-success" (click)="navigateU()">Open Angular POPUP Outlet</button>
 
 
 <ng-template #content let-c="close" let-d="dismiss">
@@ -28,3 +28,4 @@
 <pre>{{closeResult}}</pre>
 
 <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Inner Compose In YOG Component</a>
+<a [routerLink]="[{ outlets: { popup: ['angular'] } }]">Angular Pop</a>

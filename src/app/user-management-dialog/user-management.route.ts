@@ -8,7 +8,7 @@ import {
 export const userMgmtRoute: Routes = [
     {
         path: 'usermanagement',
-        component: UserManagementComponent,
+        component: UserManagementComponent
 
     }
 

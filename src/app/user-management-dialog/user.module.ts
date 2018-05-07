@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule} from '@angular/common';
-import { adminState} from './user.route' ;
+import { userState} from './user.route' ;
 
 import {
     UserManagementDialogComponent,
@@ -12,7 +12,7 @@ import {
 
 @NgModule({
     imports: [
-        RouterModule.forChild(adminState),
+        RouterModule.forChild(userState),
         CommonModule
     ],
     declarations: [
@@ -26,6 +26,7 @@ import {
     providers: [
         UserService
     ],
+   exports:[RouterModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class UserModule { }

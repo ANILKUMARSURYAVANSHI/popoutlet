@@ -5,7 +5,6 @@ import { BookComponent } from './book/book.component';
 import { ComputerComponent } from './computer/computer.component';
 import { YogComponent } from './yog/yog.component';
 import { AsanComponent } from './asan/asan.component';
-import { PranayamComponent } from './pranayam/pranayam.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
 
@@ -16,14 +15,17 @@ const appRoutes: Routes = [
             path: 'yog',
             component: YogComponent
         },
-    { path: 'book', component: BookComponent },
-    {
-        path: 'computer',
-        component: ComputerComponent,
-        data: { title: 'Heroes List' }
-    }
-    ]
+        {   path: 'book', 
+            component: BookComponent },
+        {
+            path: 'computer',
+            component: ComputerComponent,
+            data: { title: 'Computers ' }
+        }
+
+        ]
     },
+
     {
         path: 'angular',
         component: PopupmodelComponent,
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     //   component: UserManagementDialogComponent,
     //   outlet: 'popup'
     // },
+    { path: 'pranayam', loadChildren : './pranayam/pranayam.module#PranayamModule'},
     { path: '**', component: YogComponent }
 ];
 

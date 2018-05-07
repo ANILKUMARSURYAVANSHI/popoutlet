@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,11 +11,11 @@ import { BookComponent } from './book/book.component';
 import { ComputerComponent } from './computer/computer.component';
 import { YogComponent } from './yog/yog.component';
 import { AsanComponent } from './asan/asan.component';
-import { PranayamComponent } from './pranayam/pranayam.component';
 import { PopupmodelComponent } from './popupmodel/popupmodel.component';
 import { ComposeComponent } from './compose/compose.component';
 import { AniltestAppRoutingModule } from './app-routing.module';
 import { UserModule } from './user-management-dialog/user.module';
+import { PranayamModule } from './pranayam/pranayam.module';
 
 
 
@@ -26,7 +26,6 @@ import { UserModule } from './user-management-dialog/user.module';
     ComputerComponent,
     YogComponent,
     AsanComponent,
-    PranayamComponent,
     PopupmodelComponent,
     ComposeComponent,
   ],
@@ -37,9 +36,11 @@ import { UserModule } from './user-management-dialog/user.module';
     BrowserAnimationsModule,
     AniltestAppRoutingModule,
     UserModule,
+    PranayamModule,
     NgbModule.forRoot()
   ],
   providers: [  ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
