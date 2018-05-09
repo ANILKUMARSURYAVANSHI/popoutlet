@@ -1,15 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
+
 <div class="container" style="border: 2px red;">
-   <ul>
-      <li style="float: left; margin-right: 20px;"><a [routerLink]="['/computer']">Computer</a></li> 
-    <li style="float: left;  margin-right: 20px;"> <a [routerLink]="['/book']">Books</a></li> 
-    <li style="float: left;  margin-right: 20px;"><a [routerLink]="[ '/usermanagement']"> User Management</a> </li> 
-    <li style="float: left;  margin-right: 20px;"><a [routerLink]="[ '/yog']"> Yog</a> </li> 
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/computer']">Computer</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/book']">Books</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="[ '/usermanagement']">usermanagement</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [routerLink]="[ '/yog']">Yog</a>
+    </li>
   </ul>
     <br>
     Now the POPUP Modal Links
