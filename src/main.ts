@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+if (module['hot']) {
+  module['hot'].accept();
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
