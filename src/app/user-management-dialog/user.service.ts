@@ -22,8 +22,13 @@ export class UserService {
         resolve(this.ngbModalRef);
       }
 
-      this.ngbModalRef = this.userModalRef(component);
-      resolve(this.ngbModalRef);
+     
+        // setTimeout used as a workaround for getting ExpressionChangedAfterItHasBeenCheckedError
+        setTimeout(() => {
+          this.ngbModalRef = this.userModalRef(component);
+          resolve(this.ngbModalRef);
+        }, 0);
+      
     });
   }
 
